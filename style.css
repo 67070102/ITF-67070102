@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+p{
+    font: size 1rem ;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    background-color: antiquewhite;
+}
+.grid-item{
+    background-color: aqua;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+    column-gap: 20px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.nav-item{
+    background-color: antiquewhite;
+}
+.nav-item-container{
+    display: flex;
+    column-gap: 5px;
+}
+.catmeme{
+    height: 200px;
+    width: 200px;
+}
