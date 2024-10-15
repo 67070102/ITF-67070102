@@ -16,20 +16,23 @@
     <p><label>Set the profile  </label><input type="text" id = "urlprofile">  <button onclick="setImg()">Set</button></p>
     <h2>Phone Number List</h2>
     <p>
-        <input type = "text" id = "name01">
-        <input type = "text" id = "tel">
-        <button onclick="addParagraph()">ADD</button>
-        <button onclick ="saveCSV()">EXPORT</button>
-    </p>
+    <div style="display: flex; gap: 10px; justify-content: center;">
+        <input class="mb-4" type="text" id="phonename" placeholder="Name">
+        <input class="mb-4" type="text" id="phone" placeholder="Tel">
+        <button onclick="addPhone()" style="height: fit-content;">add</button>
+        <label>
+            <button onclick="saveCSV()">Export</button>
+        </label> 
+    </div>
+        
     <table id="phonetable" border="1" style="width: 500px;">
         <tr>
             <th>No.</th>
             <th>Name</th>
             <th>phonenumber</th>
         </tr>
-        
     </table>
-    
+
     <div class="container">
 
     </div>
@@ -66,11 +69,11 @@
             console.log(phones)
             const phonetable = document.getElementById("phonetable");
 
-            phonetable.innerHTML += <tr>
+            phonetable.innerHTML += `<tr>
                 <td>${phonetable.children.lenght}</td>
                 <td>${phonename}</td>
                 <td>${phone}</td>
-            </tr>
+            </tr>`
         }
 
         function saveCSV() {
