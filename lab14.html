@@ -6,33 +6,33 @@
     <title>Document</title>
     <link rel = "stylesheet" href = "style2.css">
 </head>
-<body class = "center">
-    <h1>Phone Book</h1>
-    <div class="profile" id = "profile">
-        <div class = "notify"><p>1</p></div>
-    </div>
-    <h1 id="user">Username, hi</h1>
-    <label>Set Username  </label><input type="text" id = "name">  <button onclick="setName()">Set</button>
-    <p><label>Set the profile  </label><input type="text" id = "urlprofile">  <button onclick="setImg()">Set</button></p>
-    <h2>Phone Number List</h2>
-    <p>
-    <div style="display: flex; gap: 10px; justify-content: center;">
-        <input class="mb-4" type="text" id="phonename" placeholder="Name">
-        <input class="mb-4" type="text" id="phone" placeholder="Tel">
-        <button onclick="addPhone()" style="height: fit-content;">add</button>
-        <label>
-            <button onclick="saveCSV()">Export</button>
-        </label> 
-    </div>
+<body>
+    <center>
+        <h1>Phone Book</h1>
+        <div class="profile" id = "profile">
+            <div class = "notify"><p>1</p></div>
+        </div>
+        <h1 id="user">Username, hi</h1>
+        <label>Set Username  </label><input type="text" id = "name">  <button onclick="setName()">Set</button>
+        <p><label>Set the profile  </label><input type="text" id = "urlprofile">  <button onclick="setImg()">Set</button></p>
+        <h2>Phone Number List</h2>
+        <p>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <input class="mb-4" type="text" id="phonename" placeholder="Name">
+            <input class="mb-4" type="text" id="phone" placeholder="Tel">
+            <button onclick="addPhone()" style="height: fit-content;">add</button>
+            <label>
+                <button onclick="saveCSV()">Export</button>
+            </label> 
+        </div>
         
-    <table id="phonetable" border="1" style="width: 500px;">
-        <tr>
+        <table id="phonetable" border="1" style="width: 500px;">
+            <tr>
             <th>No.</th>
             <th>Name</th>
             <th>phonenumber</th>
-        </tr>
-    </table>
-
+            </tr>
+    </center>
     <div class="container">
 
     </div>
@@ -77,7 +77,7 @@
         }
 
         function saveCSV() {
-        const csvContent = phonenumber.map(row => row.join(",")).join("\n"); // Convert array to CSV string
+        const csvContent = phones.map(row => row.join(",")).join("\n"); // Convert array to CSV string
         const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
         const link = document.createElement("a");
         const url = URL.createObjectURL(blob);
@@ -89,5 +89,5 @@
         document.body.removeChild(link);
 };
     </script>
-</body>
-</html>
+</head>
+<body>
