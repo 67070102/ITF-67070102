@@ -60,19 +60,19 @@
             newdiv.appendChild(newpara);
         }
         const phones = []
-        function addPhone(){
-            const phonename = document.getElementById("phonename").value;
-            const phone = docment.getElementById("phone").value;
-            console.log(phonename, phone)
-            phones.push([phonename,phone])
+        function addPhone() {
+        const phonename = document.getElementById("phonename").value;
+        const phone = document.getElementById("phone").value;
+        console.log(phonename, phone)
+        phones.push([phonename, phone])
+        
+        console.log(phones)
+        const phonetable = document.getElementById("phonetable");
 
-            console.log(phones)
-            const phonetable = document.getElementById("phonetable");
-
-            phonetable.innerHTML += `<tr>
-                <td>${phonetable.children.lenght}</td>
-                <td>${phonename}</td>
-                <td>${phone}</td>
+        phonetable.innerHTML += `<tr>
+              <td>${phonetable.children.length}</td>
+              <td>${phonename}</td>
+              <td>${phone}</td>
             </tr>`
         }
 
